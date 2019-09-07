@@ -116,23 +116,6 @@
 
 
 
-    function is_wechat_client(){
-
-        var ua = navigator.userAgent.toLowerCase();
-
-        if(ua.match(/MicroMessenger/i)=="micromessenger"){
-            window.location.href="https://suishi-1256985330.cos.ap-guangzhou.myqcloud.com/download/app-release.apk";
-            return true;
-
-        }else{
-alert(2)
-            return false;
-
-        }
-
-    }
-    is_wechat_client();
-
 
     var swiper = new Swiper('#mainBox',{
         direction : 'vertical',

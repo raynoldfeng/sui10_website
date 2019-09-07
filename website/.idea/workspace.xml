@@ -26,8 +26,8 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39636913" vertical-offset="2075" max-vertical-offset="3249">
-              <caret line="123" column="114" selection-start-line="123" selection-start-column="114" selection-end-line="123" selection-end-column="114" />
+            <state vertical-scroll-proportion="0.31013617" vertical-offset="1942" max-vertical-offset="2926">
+              <caret line="113" column="26" selection-start-line="113" selection-start-column="26" selection-end-line="113" selection-end-column="26" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -527,18 +527,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/swiper.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="11876" max-vertical-offset="12730">
-          <caret line="604" column="33" selection-start-line="604" selection-start-column="33" selection-end-line="604" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/swiper.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="361">
           <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/edit (3).js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="689">
+          <caret line="0" column="1794" selection-start-line="0" selection-start-column="1794" selection-end-line="0" selection-end-column="1794" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/swiper.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="11876" max-vertical-offset="12730">
+          <caret line="604" column="33" selection-start-line="604" selection-start-column="33" selection-end-line="604" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -551,17 +558,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/edit (3).js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="689">
-          <caret line="0" column="1794" selection-start-line="0" selection-start-column="1794" selection-end-line="0" selection-end-column="1794" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39636913" vertical-offset="2075" max-vertical-offset="3249">
-          <caret line="123" column="114" selection-start-line="123" selection-start-column="114" selection-end-line="123" selection-end-column="114" />
+        <state vertical-scroll-proportion="0.31013617" vertical-offset="1942" max-vertical-offset="2926">
+          <caret line="113" column="26" selection-start-line="113" selection-start-column="26" selection-end-line="113" selection-end-column="26" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
