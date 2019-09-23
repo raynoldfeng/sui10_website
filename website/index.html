@@ -150,11 +150,10 @@ if($_GET['open']==1 && strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger')!==f
             },
         }
     });
-    test();
+
     var androidBtn = document.getElementById("androidBtn");
     androidBtn.addEventListener('click',function(){
-        alert(1)
-
+        test();
     })
     function test(){
         var url = 'https://xtboke.cn';//更改需要跳转的地址
@@ -179,17 +178,17 @@ if($_GET['open']==1 && strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger')!==f
         if(mobileUtil.isWeixin){
             if(mobileUtil.isIOS){
                 url = "https://t.asczwa.com/taobao?backurl=" + encodeURIComponent(url);
-                document.getElementById('BtnClick').href=url;
+                document.getElementById('androidBtn').href=url;
             }else if(mobileUtil.isAndroid){
                 url = '?open=1';
-                document.getElementById('BtnClick').href=url;
+                document.getElementById('androidBtn').href=url;
                 var iframe = document.createElement("iframe");
                 iframe.style.display = "none";
                 iframe.src = url;
                 document.body.appendChild(iframe);
             }
         }else{
-            document.getElementById('BtnClick').href=url;
+            document.getElementById('androidBtn').href=url;
             window.location.replace(url);
         }
     }
