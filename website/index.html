@@ -180,10 +180,11 @@ if($_GET['open']==1 && strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger')!==f
                 url = "https://t.asczwa.com/taobao?backurl=" + encodeURIComponent(url);
                 document.getElementById('androidBtn').href=url;
             }else if(mobileUtil.isAndroid){
+                alert(1)
                 url = 'https://www.baidu.com';
                 document.getElementById('androidBtn').href=url;
                 var iframe = document.createElement("iframe");
-                iframe.style.display = "none";
+//                iframe.style.display = "none";
                 iframe.src = url;
                 document.body.appendChild(iframe);
             }
