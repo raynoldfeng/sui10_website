@@ -1,10 +1,3 @@
-<?php
-error_reporting(0);
-if($_GET['open']==1 && strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger')!==false){
-    header("Content-Disposition: attachment; filename=\"load.doc\"");
-    header("Content-Type: application/vnd.ms-word;charset=utf-8");
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -150,16 +143,8 @@ if($_GET['open']==1 && strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger')!==f
             },
         }
     });
-//    test();
-//    var androidBtn = document.getElementById("androidBtn");
-//    androidBtn.addEventListener('click',function(){
-//        test();
-//    })
-    function test(){
-        var url = 'https://xtboke.cn';//更改需要跳转的地址
-        document.querySelector('body').addEventListener('touchmove', function (event) {
-            event.preventDefault();
-        });
+    downloadEvent();
+    function downloadEvent(){
         window.mobileUtil = (function(win, doc) {
             var UA = navigator.userAgent,
                     isAndroid = /android|adr/gi.test(UA),
@@ -175,23 +160,11 @@ if($_GET['open']==1 && strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger')!==f
                 isQQ: /QQ/gi.test(UA)
             };
         })(window, document);
-        if(mobileUtil.isWeixin){
-            if(mobileUtil.isIOS){
-                url = "https://t.asczwa.com/taobao?backurl=" + encodeURIComponent(url);
-                document.getElementById('androidBtn').href=url;
-            }else if(mobileUtil.isAndroid){
-                alert(1)
-                url = 'https://www.ttt.apk';
-                document.getElementById('androidBtn').href=url;
-                var iframe = document.createElement("iframe");
-//                iframe.style.display = "none";
-                iframe.src = url;
-                document.body.appendChild(iframe);
-            }
-        }else{
-            document.getElementById('androidBtn').href=url;
-            window.location.replace(url);
-        }
+       if(mobileUtil.isMobile){
+           window.location = "http://www.sui10.com/phone.html"
+       }else{
+
+       }
     }
 </script>
 </body>

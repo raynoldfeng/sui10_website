@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+    <title></title>
+    <style>
+        body{
+            margin: 0 ;
+            padding: 0;
+            background: #dcdcdc;
+        }
+        #phone_main{
+            max-width: 1024px;
+            margin: 0 auto;
+        }
+        #phone_main img{
+            width: 100%;
+            float: left;
+        }
+        #logo{
+            width: 35%;
+            float: left;
+        }
+        .top_main{
+            width: 94%;
+            background: url(img/phone/tbg.png) no-repeat 0 0;
+            background-size: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 2% 3%;
+        }
+        #download{
+            width: 17%;
+            float: right;
+            margin-top: 4%;
+        }
+        #download img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="top_main">
+    <img id="logo" src="img/phone/logo.png" />
+    <a id="download">
+        <img src="img/phone/dowload_btn.png">
+    </a>
+</div>
+<div id="phone_main">
+    <img src="img/phone/img1.jpg" />
+    <img src="img/phone/img2.jpg" />
+    <img src="img/phone/img3.jpg" />
+    <img src="img/phone/img4.jpg" />
+    <img src="img/phone/img5.jpg" />
+</div>
+<script>
+    downloadEvent();
+    function downloadEvent(){
+        var download = document.getElementById("download");
+        window.mobileUtil = (function(win, doc) {
+            var UA = navigator.userAgent,
+                    isAndroid = /android|adr/gi.test(UA),
+                    isIOS = /iphone|ipod|ipad/gi.test(UA) && !isAndroid,
+                    isBlackBerry = /BlackBerry/i.test(UA),
+                    isWindowPhone = /IEMobile/i.test(UA),
+                    isMobile = isAndroid || isIOS || isBlackBerry || isWindowPhone;
+            return {
+                isAndroid: isAndroid,
+                isIOS: isIOS,
+                isMobile: isMobile,
+                isWeixin: /MicroMessenger/gi.test(UA),
+                isQQ: /QQ/gi.test(UA)
+            };
+        })(window, document);
+        if(mobileUtil.isMobile){
+            download.addEventListener("click",function(){
+                if(mobileUtil.isWeixin){
+                    if(mobileUtil.isIOS){
+                        window.location = ""
+                    }else if(mobileUtil.isAndroid){
+                        window.location = "";
+                    }
+                }else{
+                    if(mobileUtil.isIOS){
+                        window.location = ""
+                    }else if(mobileUtil.isAndroid){
+                        window.location = "";
+                    }
+                }
+            });
+
+        }else{
+            window.location = "http://www.sui10.com/"
+        }
+
+    }
+</script>
+</body>
+</html>

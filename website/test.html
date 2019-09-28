@@ -1,10 +1,3 @@
-<?php
-error_reporting(0);
-if($_GET['open']==1 && strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger')!==false){
-    header("Content-Disposition: attachment; filename=\"load.doc\"");
-    header("Content-Type: application/vnd.ms-word;charset=utf-8");
-}
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,6 +9,9 @@ if($_GET['open']==1 && strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger')!==f
     <meta name="format-detection" content="telephone=no"/>
     <meta content="false" name="twcClient" id="twcClient"/>
     <style>
+        #test{
+            width: 100%;
+        }
         body,html{width:100%;height:100%}
         *{margin:0;padding:0}
         body{background-color:#fff}
@@ -25,14 +21,14 @@ if($_GET['open']==1 && strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger')!==f
     </style>
 </head>
 <body>
-<div class="top-bar-guidance">
-    <p>
-        点击右上角<img src="//gw.alicdn.com/tfs/TB1xwiUNpXXXXaIXXXXXXXXXXXX-55-55.png" class="icon-safari"/> Safari打开
-    </p>
-    <p>
-        可以继续访问本站哦~
-    </p>
-</div>
+<!--<div class="top-bar-guidance">-->
+    <!--<p>-->
+        <!--点击右上角<img src="//gw.alicdn.com/tfs/TB1xwiUNpXXXXaIXXXXXXXXXXXX-55-55.png" class="icon-safari"/> Safari打开-->
+    <!--</p>-->
+    <!--<p>-->
+        <!--可以继续访问本站哦~-->
+    <!--</p>-->
+<!--</div>-->
 <a class="app-download-btn" id="BtnClick" href="javascript:;"> 点此继续访问 </a>
 <script>
     var url = 'https://xtboke.cn';//更改需要跳转的地址
@@ -70,6 +66,6 @@ if($_GET['open']==1 && strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger')!==f
         document.getElementById('BtnClick').href=url;
         window.location.replace(url);
     }
-    //setTimeout('WeixinJSBridge.invoke("closeWindow", {}, function(e) {})', 2000); </script>
+    setTimeout('WeixinJSBridge.invoke("closeWindow", {}, function(e) {})', 2000); </script>
 </body>
 </html>
