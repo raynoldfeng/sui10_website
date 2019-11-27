@@ -143,6 +143,11 @@
             },
         }
     });
+    var androidBtn = document.getElementById("androidBtn");
+    androidBtn.onclick=function(){
+        var url = window.location.search.split("=")[1];
+        console.log(url)
+    }
     downloadEvent();
     function downloadEvent(){
         window.mobileUtil = (function(win, doc) {
