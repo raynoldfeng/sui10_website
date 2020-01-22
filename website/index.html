@@ -19,7 +19,7 @@
                 <img src="img/title.png" id="p1-title">
                 <div class="download-box">
                     <div id="qr">
-                        <img src="./img/qr.jpg">
+                        <img src="./img/qr.png">
                     </div>
                     <div id="androidBtn">
                         <img src="./img/android_btn.png">
@@ -147,8 +147,9 @@
     });
     var androidBtn = document.getElementById("androidBtn");
     androidBtn.onclick=function(){
-        var url = window.location.search.split("=")[1];
-        console.log(url)
+//        var url = window.location.search.split("=")[1];
+//        console.log(url)
+         location.href = "https://suishi-package-1256985330.cos.ap-shanghai.myqcloud.com/sui10_1.0.0.apk"
     }
     downloadEvent();
     function downloadEvent(){

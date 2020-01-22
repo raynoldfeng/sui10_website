@@ -98,7 +98,7 @@ body {
 #androidBtn,#iosBtn{
     width: 20%;
     margin-left:12% ;
-
+    cursor: pointer;
 }
 #iosBtn{
     width: 345px;
