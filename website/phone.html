@@ -74,19 +74,22 @@
                 isQQ: /QQ/gi.test(UA)
             };
         })(window, document);
+
         if(mobileUtil.isMobile){
             download.addEventListener("click",function(){
                 if(mobileUtil.isWeixin){
                     if(mobileUtil.isIOS){
-                        window.location = "http://admin.sui10.com/api/weixinRedirect?apk_url=http://baidu.com"
+                        alert("敬请期待");
+                       // window.location = "http://admin.sui10.com/api/weixinRedirect?apk_url=http://baidu.com"
                     }else if(mobileUtil.isAndroid){
-                        window.location = "http://admin.sui10.com/api/weixinRedirect?apk_url=http://baidu.com";
+                        window.location = "http://admin.sui10.com/api/weixinRedirect?apk_url=https://suishi-package-1256985330.cos.ap-shanghai.myqcloud.com/sui10_1.0.0.apk";
                     }
                 }else{
                     if(mobileUtil.isIOS){
-                        window.location = ""
+                        alert("敬请期待");
+                   //     window.location = ""
                     }else if(mobileUtil.isAndroid){
-                        window.location = "";
+                        window.location = "https://suishi-package-1256985330.cos.ap-shanghai.myqcloud.com/sui10_1.0.0.apk";
                     }
                 }
             });

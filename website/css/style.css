@@ -101,6 +101,15 @@ body {
 
 }
 #iosBtn{
+    width: 345px;
+    height: 72px;
+    border: 1px solid #ffffff;
+    line-height: 72px;
+    color: #ffffff;
+    font-size: 26px;
+    border-radius:4px ;
+}
+#iosBtn{
     margin-top: 1%;
 }
 #androidBtn img , #iosBtn img{
@@ -282,7 +291,7 @@ body {
 }
 .pageBox5-text{
     width: 64%;
-    margin:  0 auto;
+    margin:  30px auto 0;
 }
 
 #page-display{

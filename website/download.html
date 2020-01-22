@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            background: #333333;
+        }
+        #download{
+            margin: 10% auto 0;
+            font-size: 3vw;
+            color: #ffffff;
+            padding: 1% 2%;
+            width: 17%;
+            border: 1px solid #ffffff;
+            border-radius: 100px;
+            text-align: center;
+        }
+        #imgText{
+            width: 100%;
+            text-align: right;
+        }
+        #imgText img{
+            width: 75%;
+
+        }
+    </style>
+</head>
+<body>
+<div id="imgText" >
+    <img  src="img.png" />
+</div>
+<div id="download">点击下载</div>
+<script>
+    window.mobileUtil = (function(win, doc) {
+        var UA = navigator.userAgent,
+                isAndroid = /android|adr/gi.test(UA),
+                isIOS = /iphone|ipod|ipad/gi.test(UA) && !isAndroid,
+                isBlackBerry = /BlackBerry/i.test(UA),
+                isWindowPhone = /IEMobile/i.test(UA),
+                isMobile = isAndroid || isIOS || isBlackBerry || isWindowPhone;
+        return {
+            isAndroid: isAndroid,
+            isIOS: isIOS,
+            isMobile: isMobile,
+            isWeixin: /MicroMessenger/gi.test(UA),
+            isQQ: /QQ/gi.test(UA)
+        };
+    })(window, document);
+    if(window.mobileUtil.isAndroid){
+        location.href="https://suishi-package-1256985330.cos.ap-shanghai.myqcloud.com/sui10_1.0.0.apk"
+    }else if(window.mobileUtil.isIOS){
+        alert("敬请期待")
+    }
+    document.getElementById("download").onclick = function(){
+        if(window.mobileUtil.isAndroid){
+            location.href="https://suishi-package-1256985330.cos.ap-shanghai.myqcloud.com/sui10_1.0.0.apk"
+        }else if(window.mobileUtil.isIOS){
+            alert("敬请期待")
+        }
+    }
+</script>
+</body>
+</html>
