@@ -39,6 +39,20 @@
         #download img{
             width: 100%;
         }
+        #windowBg{
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            text-align: right;
+            display: none;
+        }
+        #windowBg img{
+            width: 75%;
+        }
     </style>
 </head>
 <body>
@@ -47,6 +61,9 @@
     <a id="download">
         <img src="img/phone/dowload_btn.png">
     </a>
+</div>
+<div id="windowBg">
+    <img src="img.png" />
 </div>
 <div id="phone_main">
     <img src="img/phone/img1.jpg" />
@@ -57,6 +74,10 @@
 </div>
 <script>
     downloadEvent();
+    var windowBg = document.getElementById("windowBg");
+    windowBg.addEventListener("click",function(){
+        windowBg.style.display = "none";
+    })
     function downloadEvent(){
         var download = document.getElementById("download");
         window.mobileUtil = (function(win, doc) {
@@ -82,7 +103,8 @@
                         alert("敬请期待");
                        // window.location = "http://admin.sui10.com/api/weixinRedirect?apk_url=http://baidu.com"
                     }else if(mobileUtil.isAndroid){
-                        window.location = "http://admin.sui10.com/api/weixinRedirect?apk_url=https://suishi-package-1256985330.cos.ap-shanghai.myqcloud.com/sui10_1.0.0.apk";
+                        windowBg.style.display = "block";
+                      //  window.location = "http://admin.sui10.com/api/weixinRedirect?apk_url=https://suishi-package-1256985330.cos.ap-shanghai.myqcloud.com/sui10_1.0.0.apk";
                     }
                 }else{
                     if(mobileUtil.isIOS){
