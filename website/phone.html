@@ -73,11 +73,11 @@
     <img src="img/phone/img5.jpg" />
 </div>
 <script>
-    downloadEvent();
     var windowBg = document.getElementById("windowBg");
     windowBg.addEventListener("click",function(){
         windowBg.style.display = "none";
-    })
+    });
+    downloadEvent();
     function downloadEvent(){
         var download = document.getElementById("download");
         window.mobileUtil = (function(win, doc) {
