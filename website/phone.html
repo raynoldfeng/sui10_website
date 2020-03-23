@@ -58,7 +58,6 @@
             width: 94%;
             padding: 5% 3%;
             background: #333333;
-            font-size: 0.6em;;
             color: #ffffff;
             text-align: center;
             float: left;
@@ -70,6 +69,19 @@
         }
         #footMain a{
             color: #ffffff;
+            font-size: 0.6em;
+        }
+        #cmText{
+            font-size: 0.6em;
+        }
+        @media only screen and (min-width: 650px){
+            #footMain a{
+                color: #ffffff;
+                font-size: 1em;
+            }
+            #cmText{
+                font-size: 1em;
+            }
         }
     </style>
 </head>
@@ -90,9 +102,10 @@
     <img src="img/phone/img4.jpg" />
     <img src="img/phone/img5.jpg" />
     <div id="footMain">
-        <div>安德迈（深圳）科技有限责任公司<br/>Copyright 2018-2019</div>
         <a  href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030402003211" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
             <img src="./img/yzlogo.png" style="float:left;"/><div style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#fff;">粤公网安备 44030402003211号</div></a>
+        <div id="cmText">安德迈（深圳）科技有限责任公司<br/>Copyright 2018-2019</div>
+
     </div>
 </div>
 <script>
